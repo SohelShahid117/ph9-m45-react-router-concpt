@@ -8,8 +8,10 @@ import "./index.css";
 import Home from "./Components/Home/Home.jsx";
 import About from "./Components/About/About.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
+import Users from "./Components/Users/Users.jsx";
 //45-1 What Is SPA, Routing And React Router Setup
 //45-2 Explain Nested Route Concepts
+//45-3 (Recap) Nested Route And Use Link, Outlet
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/users",
+        element: <Users></Users>,
       },
     ],
   },

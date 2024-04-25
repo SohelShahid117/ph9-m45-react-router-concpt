@@ -1,20 +1,32 @@
-import React from "react";
+import React, { Children } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import Home from "./Components/Home/Home.jsx";
+import About from "./Components/About/About.jsx";
+import Contact from "./Components/Contact/Contact.jsx";
 //45-1 What Is SPA, Routing And React Router Setup
+//45-2 Explain Nested Route Concepts
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!I am in home page</div>,
-  },
-  {
-    path: "/about",
-    element: <div>I am in about page</div>,
+    // element: <div>Hello world!I am in home page</div>,
+    element: <Home></Home>,
+    children: [
+      {
+        path: "/about",
+        // element: <div>I am in about page</div>,
+        element: <About></About>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+    ],
   },
 ]);
 

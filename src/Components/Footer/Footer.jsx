@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <p>
-        <small>Than u for visiting our site</small>
+        <small>Thank u for visiting our site</small>
       </p>
     </div>
   );

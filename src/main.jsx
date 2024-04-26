@@ -10,6 +10,9 @@ import About from "./Components/About/About.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
 import Users from "./Components/Users/Users.jsx";
 import UserDetails from "./Components/Contact/UserDetails/UserDetails.jsx";
+import Posts from "./Components/Posts/Posts.jsx";
+import PostDetails from "./Components/PostDetails/PostDetails.jsx";
+// import PostDetails from "./Components/PostDetails/PostDetails";
 //45-1 What Is SPA, Routing And React Router Setup
 //45-2 Explain Nested Route Concepts
 //45-3 (Recap) Nested Route And Use Link, Outlet
@@ -50,6 +53,17 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         element: <UserDetails></UserDetails>,
+      },
+      {
+        path: "/posts",
+        loader: () => fetch(`https://jsonplaceholder.typicode.com/posts`),
+        element: <Posts></Posts>,
+      },
+      {
+        path: "/pst/:postId",
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        element: <PostDetails></PostDetails>,
       },
     ],
   },

@@ -19,8 +19,11 @@ import ErrorPage from "./Components/ErrorPage/ErrorPage.jsx";
 //45-3 (Recap) Nested Route And Use Link, Outlet
 
 //45-5 Dynamic Route With Params And Load Single User Data
+//45-9 Module Summary And Practice With Meal Db
 
 const router = createBrowserRouter([
+  //for API link ----> https://www.themealdb.com/
+  //free API --->https://www.themealdb.com/api.php
   {
     path: "/",
     // element: <div>Hello world!I am in home page</div>,
